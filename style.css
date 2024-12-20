@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Masonry Grid Layout */
+.image-details {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0px;
+  column-gap: 34px;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.image-details li.author-info {
+  list-style: none;
+}
+.image-details li.author-info h4 {
+  margin: 0px;
+}
+.image-meta {
+  flex: 0 0 auto;
+  margin-bottom: 10px;
+}
+
+.image-meta h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333; /* Dark text color */
+  font-weight: bold;
+}
+
+.image-stats {
+  flex: 1;
+}
+
+.image-stats p {
+  margin: 0;
+  font-size: 14px;
+  color: #555; /* Slightly lighter text color */
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+#grid {
+  max-width: 100%;
+  width: 100%;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  column-count: 3;
+}
+.grid-item {
+  width: 31%;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  margin-bottom: 30px;
+  float: left;
+  margin-right: 10px;
+  column-gap: 20px;
+}
+.grid-item {
+  float: left;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+.grid-item a {
+  width: 100%;
+  height: 100%;
+}
+.grid-item a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .grid-item {
+    width: 47%;
+  }
+  #grid {
+    max-width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .grid-item {
+    width: 100%;
+  }
+}
